@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class dharula extends StatefulWidget {
+  const dharula({super.key});
+
   @override
   _dharuraState createState() => _dharuraState();
 }
 
 class _dharuraState extends State<dharula> {
   // Dummy list of reports - replace with your actual data fetching logic
-  List<Report> _reports = [
+  final List<Report> _reports = [
     Report(
       id: '1',
       Image: ("images/2.jpg"),

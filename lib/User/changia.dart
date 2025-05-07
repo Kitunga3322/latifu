@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class changia extends StatefulWidget {
+  const changia({super.key});
+
   @override
   changiaState createState() => changiaState();
 }

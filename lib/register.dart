@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:latifu/User/login.dart';
 import 'package:latifu/apiConnection.dart';
-import 'package:latifu/User/home.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
