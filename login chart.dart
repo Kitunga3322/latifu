@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:latifu/User/home.dart';
 import 'package:latifu/register.dart';
-
-import 'home.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

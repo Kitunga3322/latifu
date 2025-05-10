@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:latifu/Admin/Registeredusers.dart';
 import 'package:latifu/admin/dharura.dart';
-
+import 'Michango.dart';
 class ChamgiaAdminPanel extends StatelessWidget {
   const ChamgiaAdminPanel({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Chamgia Admin Panel',
       theme: ThemeData(
         primarySwatch: Colors.green,
@@ -145,7 +146,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
               onTap: () {
                 _onItemTapped(2);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => dharura()));
+                    MaterialPageRoute(builder: (context) => UploadImagePage()));
               },
             ),
             const Divider(),
