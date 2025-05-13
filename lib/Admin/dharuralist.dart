@@ -1,21 +1,22 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dharurainsert.dart';
 
-class dharula extends StatefulWidget {
-  const dharula({super.key});
+class DharuraList extends StatefulWidget {
+  const DharuraList({super.key});
 
   @override
-  State<dharula> createState() => _dharulaState();
+  State<DharuraList> createState() => _DharuraListState();
 }
 
-class _dharulaState extends State<dharula> {
+class _DharuraListState extends State<DharuraList> {
   late List<dynamic> dharuradata = [];
 
   Future<void> getdharuraData() async {
     try {
       // Assuming Api.dharuralist contains the correct URL to fetch data
-      final response = await http.post(Uri.parse('http://192.168.208.4/CHANGIA/dharuralist.php'));
+      final response = await http.post(Uri.parse('http://192.168.194.4/CHANGIA/dharuralist.php'));
       if (response.statusCode == 200) {
         setState(() {
           dharuradata = jsonDecode(response.body);
@@ -45,8 +46,22 @@ class _dharulaState extends State<dharula> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("MATUKIO YA DHARURA"),
-        centerTitle: true,
+        title: const Text("MIRADI"),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Dharurainsert(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.add_circle_outline_sharp,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: FutureBuilder<void>(
         future: null, // Data is fetched in initState
@@ -57,7 +72,7 @@ class _dharulaState extends State<dharula> {
               itemBuilder: (BuildContext context, int index) {
                 // Construct the image URL using the same base URL as the data fetch
                 final String imageUrl =
-                    'http://192.168.208.4/CHANGIA/${dharuradata[index]["image"]}'; // Corrected URL
+                    'http://192.168.194.4/CHANGIA/${dharuradata[index]["image"]}'; // Corrected URL
 
                 return Card(
                   shape: const BeveledRectangleBorder(
@@ -112,3 +127,4 @@ class _dharulaState extends State<dharula> {
     );
   }
 }
+

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:latifu/Admin/Registeredusers.dart';
-import 'package:latifu/admin/dharura.dart';
-import 'Michango.dart';
+import 'dharurainsert.dart';
+import 'dharuralist.dart';
+import 'miradi/Allmiradi.dart';
+
 class ChamgiaAdminPanel extends StatelessWidget {
   const ChamgiaAdminPanel({super.key});
 
@@ -122,7 +124,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             ),
             ListTile(
               leading: const Icon(Icons.people),
-              title: const Text('Idadi ya watumiaji'),
+              title: const Text('Users'),
               selected: _selectedIndex == 1,
               onTap: () {
                 _onItemTapped(1);
@@ -146,7 +148,17 @@ class _AdminDashboardState extends State<AdminDashboard> {
               onTap: () {
                 _onItemTapped(2);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => UploadImagePage()));
+                    MaterialPageRoute(builder: (context) => DharuraList()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.account_balance_wallet_outlined),
+              title: const Text('Miradi'),
+              selected: _selectedIndex == 2,
+              onTap: () {
+                _onItemTapped(2);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Allmiradi()));
               },
             ),
             const Divider(),

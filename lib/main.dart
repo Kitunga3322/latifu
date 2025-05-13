@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:latifu/User/Aboutus.dart';
 import 'package:latifu/User/changia.dart';
-import 'package:latifu/User/login.dart';
 import 'package:latifu/admin/adminpanel.dart';
+
+import 'User/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -68,11 +69,10 @@ class HomePage extends StatelessWidget {
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(11.0),
                 image: const DecorationImage(
-                  image: AssetImage("images/2.jpg"),
-                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/2.jpg'),
                 )),
             child: Container(
-                margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                margin: const EdgeInsets.only(left: 20, right: 10, bottom: 20),
                 child: Column(children: <Widget>[
                   const SizedBox(width: 10.0),
                   const SizedBox(height: 100),

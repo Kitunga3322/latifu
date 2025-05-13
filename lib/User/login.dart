@@ -2,8 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:latifu/User/home.dart';
-import 'package:latifu/register.dart';
-import 'package:latifu/apiConnection.dart';
+import 'package:latifu/User/register.dart';
+import 'package:latifu/User/UpiConnection.dart';
+
+import 'UpiConnection.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -28,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse(Api.login), // Replace with your server address
+        Uri.parse('http://192.168.194.4/CHANGIA/login.php'), // Replace with your server address
         body: {
           'email': _emailController.text,
           'password': _passwordController.text,

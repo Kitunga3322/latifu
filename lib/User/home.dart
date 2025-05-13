@@ -17,7 +17,7 @@ class home extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(0.0),
             children: <Widget>[
-              Image.asset('images/3.jpg'),
+              Image.asset('assets/images/3.jpg'),
               ListTile(
                 title: const Text('Nyumbani'),
                 trailing: const Icon(Icons.home),
@@ -68,7 +68,7 @@ class home extends StatelessWidget {
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(11.0),
                 image: const DecorationImage(
-                  image: AssetImage("images/2.jpg"),
+                  image: AssetImage('assets/images/3.jpg'),
                   fit: BoxFit.cover,
                 )),
             child: Container(
