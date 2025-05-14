@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 
-class wagonjwa extends StatefulWidget {
-  const wagonjwa({super.key});
+class Walemavuinsert extends StatefulWidget {
+  const Walemavuinsert({super.key});
 
   @override
-  State<wagonjwa> createState() => _wagonjwaState();
+  State<Walemavuinsert> createState() => _WalemavuinsertState();
 }
-class _wagonjwaState extends State<wagonjwa> {
+class _WalemavuinsertState extends State<Walemavuinsert> {
   TextEditingController name = TextEditingController();
   TextEditingController description = TextEditingController();
   final ImagePicker _picker = ImagePicker();
@@ -26,7 +26,7 @@ class _wagonjwaState extends State<wagonjwa> {
   }
 
   Future<void> uploadData() async {
-    var uploadurl = Uri.parse('http://       /CHANGIA/    ');
+    var uploadurl = Uri.parse('http://192.168.69.4/CHANGIA/walemavuinsert.php');
     try {
       if (uploadimage == null) {
         print("Please select an image");
@@ -64,7 +64,7 @@ class _wagonjwaState extends State<wagonjwa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("CHANGIA WAGONJWA")),
+        title: const Center(child: Text("Add Walemavu")),
         backgroundColor: Colors.deepOrangeAccent,
       ),
       body: SingleChildScrollView(
@@ -77,8 +77,8 @@ class _wagonjwaState extends State<wagonjwa> {
                 autofocus: true,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: "Jina La Yatioma",
-                  hintText: "Jina La Yatima",
+                  labelText: "Jina la mlemavu",
+                  hintText: "Andika Jina La Mlemavu",
                   prefixIcon: Icon(Icons.title),
                 ),
               ),
@@ -90,8 +90,8 @@ class _wagonjwaState extends State<wagonjwa> {
                 autofocus: true,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: "Changamoto za Yatima",
-                  hintText: "Andika changamoto Yatima",
+                  labelText: "Tatizo la Mlemavu",
+                  hintText: "Andika Tatizo la Mlemavu",
                   prefixIcon: Icon(Icons.text_snippet_outlined),
                 ),
               ),

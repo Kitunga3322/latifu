@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:latifu/User/dharula.dart';
-import 'package:latifu/admin/adminpanel.dart';
+import 'Aboutus.dart';
 import 'changia.dart';
-import 'miradi.dart';
+import 'login.dart';
+import 'miradi/miradi.dart';
 
 class home extends StatelessWidget {
   const home({super.key});
@@ -50,7 +51,7 @@ class home extends StatelessWidget {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ChamgiaAdminPanel())),
+                        builder: (context) => const AboutUsPage())),
               ),
               ListTile(
                 title: const Text('ONDOKA'),
@@ -58,7 +59,7 @@ class home extends StatelessWidget {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ChamgiaAdminPanel())),
+                        builder: (context) => const LoginScreen())),
               ),
             ],
           ),

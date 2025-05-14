@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:latifu/Admin/ApiConnection.dart';
 
 class RegisterFetch extends StatefulWidget {
   const RegisterFetch({super.key});
@@ -15,7 +14,8 @@ class RegisterFetchState extends State<RegisterFetch> {
 
   Future<void> getrecords() async {
     try {
-      var response = await http.get(Uri.parse(Api.registerFetch));
+      var response =
+      await http.get(Uri.parse('http://192.168.234.4/CHANGIA/registerFetch.php'));
       if (response.statusCode == 200) {
         setState(() {
           userdata = jsonDecode(response.body);
@@ -38,7 +38,7 @@ class RegisterFetchState extends State<RegisterFetch> {
     try {
       final response = await http.delete(
         Uri.parse(
-            '${Api.deleteuserregister}/$userId'), // Assuming your delete endpoint requires the user ID
+            'http://192.168.234.4/CHANGIA/deleteUser.php?id=$userId'), // Corrected URL
       );
       if (response.statusCode == 200) {
         // Deletion successful, now refresh the user list
@@ -99,7 +99,7 @@ class RegisterFetchState extends State<RegisterFetch> {
                         ),
                         TextButton(
                           style:
-                              TextButton.styleFrom(foregroundColor: Colors.red),
+                          TextButton.styleFrom(foregroundColor: Colors.red),
                           child: const Text("Delete"),
                           onPressed: () {
                             deleteUser(userdata[index]["id"]
@@ -119,3 +119,4 @@ class RegisterFetchState extends State<RegisterFetch> {
     );
   }
 }
+

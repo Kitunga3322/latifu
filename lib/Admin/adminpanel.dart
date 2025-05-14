@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:latifu/Admin/Registeredusers.dart';
-import 'dharurainsert.dart';
-import 'dharuralist.dart';
+import 'Michango.dart';
+import 'dharura.dart';
+import 'dharura.dart';
 import 'miradi/Allmiradi.dart';
 
 class ChamgiaAdminPanel extends StatelessWidget {
@@ -138,7 +139,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
               selected: _selectedIndex == 1,
               onTap: () {
                 _onItemTapped(1);
-                Navigator.pop(context);
+                Navigator.push(
+                  context, MaterialPageRoute(builder: (context)=> michango())
+                );
               },
             ),
             ListTile(
@@ -201,25 +204,13 @@ class DashboardScreen extends StatelessWidget {
               children: const [
                 DashboardCard(
                   title: 'Idadi ya Watumiaji',
-                  value: '1,500',
+                  value: '',
                   icon: Icons.people,
                   color: Colors.blue,
                 ),
                 DashboardCard(
-                  title: 'Total Products',
-                  value: '500',
-                  icon: Icons.shopping_bag,
-                  color: Colors.orange,
-                ),
-                DashboardCard(
-                  title: 'MAOMBI YA MCHNGO',
-                  value: '800',
-                  icon: Icons.shopping_cart,
-                  color: Colors.purple,
-                ),
-                DashboardCard(
                   title: 'MCHANGO',
-                  value: 'TZS 1,200,000',
+                  value: '',
                   icon: Icons.attach_money,
                   color: Colors.green,
                 ),

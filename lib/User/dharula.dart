@@ -14,8 +14,7 @@ class _dharulaState extends State<dharula> {
 
   Future<void> getdharuraData() async {
     try {
-      // Assuming Api.dharuralist contains the correct URL to fetch data
-      final response = await http.post(Uri.parse('http://192.168.208.4/CHANGIA/dharuralist.php'));
+      final response = await http.post(Uri.parse('http://192.168.234.4/CHANGIA/dharuralist.php'));
       if (response.statusCode == 200) {
         setState(() {
           dharuradata = jsonDecode(response.body);
@@ -57,7 +56,7 @@ class _dharulaState extends State<dharula> {
               itemBuilder: (BuildContext context, int index) {
                 // Construct the image URL using the same base URL as the data fetch
                 final String imageUrl =
-                    'http://192.168.208.4/CHANGIA/${dharuradata[index]["image"]}'; // Corrected URL
+                    'http://192.168.234.4/CHANGIA/${dharuradata[index]["image"]}'; // Corrected URL
 
                 return Card(
                   shape: const BeveledRectangleBorder(

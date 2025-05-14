@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:latifu/User/Aboutus.dart';
 import 'package:latifu/User/changia.dart';
 import 'package:latifu/admin/adminpanel.dart';
-
 import 'User/login.dart';
 
 void main() {
@@ -66,7 +65,7 @@ class HomePage extends StatelessWidget {
         ),
         body: Container(
             decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(11.0),
                 image: const DecorationImage(
                   image: AssetImage('assets/images/2.jpg'),
