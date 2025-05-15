@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:latifu/User/home.dart'; // Import your home screen
-import 'package:latifu/User/register.dart'; // Import your register screen
+import 'package:latifu/User/home.dart';
+import 'package:latifu/User/register.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
